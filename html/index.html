@@ -6,22 +6,69 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="shortcut icon" href="../assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <nav class="nav">
-        <picture class="logo">
-            <a href=""><img src="../assets/images/logo-bookmark.svg" alt=""></a>
-        </picture>
+        <div class="logo">
+            <a href="" ><img src="../assets/images/logo-bookmark.svg" alt="" id="miImagen"></a>
+            <button class="icon-bar">
+                <i class="fa-solid fa-bars fa-lg" style="color: white"></i>
+            </button>
+        </div>
         <section class="section-items">
-            <div class="div-items">
-                <a href="">FEATURES</a>
-                <a href="">PRICING</a>
-                <a href="">CONTACT</a>
+            <div class="div-items" >
+                <a href="#">FEATURES</a>
+                <a href="#">PRICING</a>
+                <a href="#">CONTACT</a>
+                <a href="#">LOGIN</a>
+
             </div>
             <div class="item-boton">
                 <button class="boton-rojo" type="button">LOGIN</button>
             </div>
         </section>
     </nav>
+    <H1>GUSTAVO OJEDA LOZANO</H1>
 </body>
+<script>
+    // Selecciona la imagen
+var imagen = document.getElementById('miImagen');
+
+// Función para cambiar la imagen
+function cambiarImagen() {
+    // Comprueba el ancho de la ventana
+    if (window.innerWidth < 600) {
+        // Si el ancho de la ventana es 600px o menos, cambia la imagen
+        imagen.src = '../assets/images/logo-bookmarkEDIT.svg';
+    } else {
+        // Si el ancho de la ventana es mayor que 600px, usa la imagen original
+        imagen.src = '../assets/images/logo-bookmark.svg';
+    }
+}
+// Escucha el evento de cambio de tamaño de la ventana
+window.addEventListener('resize', cambiarImagen);
+// Llama a la función cambiarImagen cuando la página se carga por primera vez
+cambiarImagen();
+
+const iconBar = document.querySelector(".icon-bar");
+const navSectionItems = document.querySelector(".nav .section-items");
+var imagen = document.getElementById('miImagen'); // Selecciona la imagen del logo
+const icon = document.querySelector(".icon-bar i");  // Selecciona el ícono dentro del botón
+
+
+iconBar.addEventListener("click", () => {
+navSectionItems.classList.toggle("section-items_visible");
+if (miImagen.getAttribute("src") === "../assets/images/logo-bookmark.svg") {
+        miImagen.setAttribute("src", "../assets/images/logo-bookmarkEDIT.svg");  // Cambia a la nueva ruta
+    } else {
+        miImagen.setAttribute("src", "../assets/images/logo-bookmark.svg");  // Cambia a la ruta original
+    }
+    if (icon.style.color === "white") {
+        icon.style.color = "hsla(228, 81%, 15%, 0.9)";  // Cambia a azul
+    } else {
+        icon.style.color = "white";  // Cambia a blanco
+    }
+});
+</script>
 </html>
