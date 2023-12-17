@@ -17,6 +17,7 @@
 body{
     font-family: var(--fuente-primaria);
     font-size: 18px;
+    overflow-x: hidden;
 }
 .nav{
     width: 100vw;
@@ -28,7 +29,7 @@ body{
 
 .nav .logo{
     width: 25%;
-    margin-left: 6rem;;
+    margin-left: 4rem;
 }
 .icon-bar{
     color: white;
@@ -78,6 +79,71 @@ body{
     border: 1px solid var(--rojo-suave);
     background-color: white;
     color: var(--rojo-suave);
+}
+main{
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    
+}
+main .text-main{
+    width: 50%;
+    margin-left: 2rem;
+    
+}
+main .text-main > h1{
+    text-align: left;
+    font-size: xx-large;
+    color: var(--azul-oscuro);
+    padding-top: 0;
+    font-weight: bold;
+}
+main .text-main > p{
+    text-align: left;
+    font-size: x-large;
+    color: var(--azul-gris);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-weight: 200;
+}
+main .text-main .btn-chrome{
+    width: 160px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: var(--azul-suave);
+    color: white;
+    border: none;
+    font-weight: 500;
+    /* box-shadow: 4px 4px 15px var(--azul-suave); */
+    cursor: pointer;
+    margin-right: 1rem;
+    
+}
+main .text-main .btn-firefox{
+    width: 160px;
+    height: 50px;
+    border-radius: 4px;
+    background-color:#F7F7F7;
+    font-weight: 500;
+    color: var(--azul-oscuro);
+    box-shadow: 0 5px 10px -5px var(--azul-oscuro);
+    cursor: pointer;
+    border: none;
+}
+main .background-main{
+    width: 50%;
+    height: 300px;
+    right: -15%;
+    top: 35%;
+    z-index: -1;
+    position: absolute;
+    border-radius: 7rem 0rem 0rem 7rem ;
+    background-color: var(--azul-suave);
+    overflow: hidden;
 }
 /* AQUI INICIA EL BREAKPOINT MENOS DE 992PX HASTA 650  */
 @media only screen and (max-width: 992px) {
