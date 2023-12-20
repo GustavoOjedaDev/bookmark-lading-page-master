@@ -123,6 +123,11 @@ main .text-main .btn-chrome{
     margin-right: 1rem;
     
 }
+main .text-main .btn-chrome:hover{
+    color: var(--azul-suave);
+    border: 2px solid var(--azul-suave);
+    background-color: white;
+}
 main .text-main .btn-firefox{
     width: 160px;
     height: 50px;
@@ -138,12 +143,116 @@ main .background-main{
     width: 50%;
     height: 300px;
     right: -15%;
-    top: 35%;
+    margin-top: 10%;
     z-index: -1;
     position: absolute;
     border-radius: 7rem 0rem 0rem 7rem ;
     background-color: var(--azul-suave);
     overflow: hidden;
+}
+.features{
+    width: 100%;
+    height: 600px;
+    padding-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+.features .text-features{
+    width: 600px;
+    height: 130px;
+    text-align: center;
+    justify-content: center;
+}
+.features .text-features > h2{
+    color: var(--azul-oscuro);
+}
+.features .text-features > p {
+    color: var(--azul-gris);
+    padding-top: 1rem;
+}
+.features .opciones-features{
+    width: 800px;
+    /* height: 200px; */
+    display: flex;
+    /* flex-direction: column; */
+    margin-top: 1.5rem;
+    justify-content: space-around;
+    color: var(--azul-gris);
+    border-bottom: 1px dotted var(--azul-gris);
+}
+.opciones-features a{
+    
+}
+.opciones-features a:hover{
+    color: var(--rojo-suave);
+    cursor: pointer;
+}
+.opciones-features a:active{
+    border-bottom: 3px solid var(--rojo-suave);
+}
+.opcion1{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    margin-top: 4rem;
+    margin-left: 2rem;
+}
+.features .opcion1 .bookmarking-background{
+    width: 50%;
+    height: 300px;
+    margin-top: 10%;
+    left: -15%;
+    z-index: -1;
+    position: absolute;
+    border-radius: 0rem 7rem 7rem 0rem ;
+    background-color: var(--azul-suave);
+    overflow: hidden;
+}
+.opcion1 .text-simple-bookmarking{
+    width: 50%;
+    margin-left: 1rem;
+    
+}
+.opcion1 .text-simple-bookmarking > h1{
+    text-align: left;
+    font-size: xx-large;
+    color: var(--azul-oscuro);
+    margin-left: 4rem;
+    padding-top: 0;
+    font-weight: bold;
+}
+.opcion1 .text-simple-bookmarking > p{
+    text-align: left;
+    margin-left: 4rem;
+    font-size: large;
+    color: var(--azul-gris);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-weight: 200;
+}
+.opcion1 .text-simple-bookmarking .btn-more-info{
+    width: 110px;
+    height: 50px;
+    border-radius: 4px;
+    margin-left: 4rem;
+    background-color: var(--azul-suave);
+    color: white;
+    border: none;
+    font-weight: 500;
+    /* box-shadow: 4px 4px 15px var(--azul-suave); */
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.opcion1 .text-simple-bookmarking .btn-more-info:hover{
+    color: var(--azul-suave);
+    border: 2px solid var(--azul-suave);
+    background-color: white;
 }
 /* AQUI INICIA EL BREAKPOINT MENOS DE 992PX HASTA 650  */
 @media only screen and (max-width: 992px) {
