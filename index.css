@@ -139,6 +139,11 @@ main .text-main .btn-firefox{
     cursor: pointer;
     border: none;
 }
+main .text-main .btn-firefox:hover{
+    color: var(--azul-oscuro);
+    border: 2px solid var(--azul-oscuro);
+    background-color: white;
+}
 main .background-main{
     width: 50%;
     height: 300px;
@@ -193,17 +198,17 @@ main .background-main{
 .opciones-features a:active{
     border-bottom: 3px solid var(--rojo-suave);
 }
-.opcion1{
+.opcion1,.opcion2,.opcion3{
     width: 100%;
     height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 2rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-left: 2rem;
 }
-.features .opcion1 .bookmarking-background{
+.features .opcion1 .bookmarking-background,.intelligent-background,.share-background{
     width: 50%;
     height: 300px;
     margin-top: 10%;
@@ -214,12 +219,14 @@ main .background-main{
     background-color: var(--azul-suave);
     overflow: hidden;
 }
-.opcion1 .text-simple-bookmarking{
+.opcion1 .text-simple-bookmarking,.text-intelligent-search,.text-sharee-bookmarking{
     width: 50%;
     margin-left: 1rem;
     
 }
-.opcion1 .text-simple-bookmarking > h1{
+.opcion1 .text-simple-bookmarking > h1,
+.opcion2 .text-intelligent-search > h1,
+.opcion3 .text-sharee-bookmarking > h1{
     text-align: left;
     font-size: xx-large;
     color: var(--azul-oscuro);
@@ -227,7 +234,9 @@ main .background-main{
     padding-top: 0;
     font-weight: bold;
 }
-.opcion1 .text-simple-bookmarking > p{
+.opcion1 .text-simple-bookmarking > p,
+.opcion2 .text-intelligent-search > p,
+.opcion3 .text-sharee-bookmarking > p{
     text-align: left;
     margin-left: 4rem;
     font-size: large;
@@ -236,7 +245,9 @@ main .background-main{
     padding-bottom: 2rem;
     font-weight: 200;
 }
-.opcion1 .text-simple-bookmarking .btn-more-info{
+.opcion1 .text-simple-bookmarking .btn-more-info,
+.opcion2 .text-intelligent-search .btn-more-info,
+.opcion3 .text-sharee-bookmarking .btn-more-info{
     width: 110px;
     height: 50px;
     border-radius: 4px;
@@ -245,14 +256,19 @@ main .background-main{
     color: white;
     border: none;
     font-weight: 500;
-    /* box-shadow: 4px 4px 15px var(--azul-suave); */
+    /* box-shadow: 4px 4px 25px var(--azul-suave); */
     cursor: pointer;
     margin-right: 1rem;
 }
-.opcion1 .text-simple-bookmarking .btn-more-info:hover{
+.opcion1 .text-simple-bookmarking .btn-more-info:hover,
+.opcion2 .text-intelligent-search .btn-more-info:hover,
+.opcion3 .text-sharee-bookmarking .btn-more-info:hover{
     color: var(--azul-suave);
     border: 2px solid var(--azul-suave);
     background-color: white;
+}
+.hide {
+    display: none;
 }
 /* AQUI INICIA EL BREAKPOINT MENOS DE 992PX HASTA 650  */
 @media only screen and (max-width: 992px) {
