@@ -343,6 +343,83 @@ main .background-main{
 .card3{
     margin-top: 8rem;
 }
+.asked {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    
+}
+.asked .text {
+    text-align: center;
+}
+
+.asked .questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.asked .questions .question {
+    width: 50%;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--azul-gris);
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    position: relative;
+}
+.asked .questions .question .flex-items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.asked .questions .question p {
+    position: absolute;
+    opacity: 0;
+    margin-top: 20px;
+    line-height: 1.7;
+    color: var(--azul-gris);
+    transition: 0.5s;
+}
+.asked .questions .question:hover span {
+    color: var(--rojo-suave);
+}
+.asked .questions .question.focus img {
+    transform: rotate(180deg);
+}
+.asked .questions .question.focus p {
+    position: static;
+    opacity: 1;
+}
+.asked .questions .question span {
+    color: var(--azul-oscuro);
+    transition: 0.5s;
+}
+.asked .questions .question:last-of-type {
+    border-bottom: 1px solid rgb(150, 150, 150);
+    padding-bottom: 20px;
+}
+.asked .questions .question img {
+    width: 25px;
+    transition: 0.3s;
+}
+.section-questions .asked .container .questions .btn-more-info{
+    width: 110px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: var(--azul-suave);
+    color: white;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.section-questions .asked .container .questions .btn-more-info:hover{
+    color: var(--azul-suave);
+    border: 2px solid var(--azul-suave);
+    background-color: white;
+}
 /* AQUI INICIA EL BREAKPOINT MENOS DE 992PX HASTA 650  */
 @media only screen and (max-width: 992px) {
     .nav .logo{

@@ -133,13 +133,76 @@
             </div>
         </div>
     </section>
-    <section class="questions">
+    <section class="section-questions">
         <div class="padre-text-cards">
             <div class="hijo-text-cards">
                 <h1>Frequently Asked Quiestions</h1>
                 <p>Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us</p>
             </div>
         </div>
+        <div class="asked">
+            <div class="container">
+              <div class="questions">
+                <div class="question">
+                  <div class="flex-items">
+                    <span>What is Bookmarck ?</span>
+                    <img src="./assets/images/icon-arrow.svg" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
+                    cupiditate! Eum commodi sit est, eaque quam inventore
+                    necessitatibus hic sapiente autem eius dicta, ipsam debitis! Nulla
+                    quidem iste amet temporibus? necessitatibus hic sapiente autem
+                    eius dicta, ipsam debitis! Nulla necessitatibus hic sapiente autem
+                    eius dicta, ipsam
+                  </p>
+                </div>
+                <div class="question">
+                  <div class="flex-items">
+                    <span>How can I request a new browser?</span>
+                    <img src="./assets/images/icon-arrow.svg" alt="" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
+                    cupiditate! Eum commodi sit est, eaque quam inventore
+                    necessitatibus hic sapiente autem eius dicta, ipsam debitis! Nulla
+                    quidem iste amet temporibus? necessitatibus hic sapiente autem
+                    eius dicta, ipsam debitis! Nulla necessitatibus hic sapiente autem
+                    eius dicta, ipsam
+                  </p>
+                </div>
+                <div class="question">
+                  <div class="flex-items">
+                    <span>Is there a mobile app?</span>
+                    <img src="./assets/images/icon-arrow.svg" alt="" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
+                    cupiditate! Eum commodi sit est, eaque quam inventore
+                    necessitatibus hic sapiente autem eius dicta, ipsam debitis! Nulla
+                    quidem iste amet temporibus? necessitatibus hic sapiente autem
+                    eius dicta, ipsam debitis! Nulla necessitatibus hic sapiente autem
+                    eius dicta, ipsam
+                  </p>
+                </div>
+                <div class="question">
+                  <div class="flex-items">
+                    <span>What about other Chromium browsers?</span>
+                    <img src="./assets/images/icon-arrow.svg" alt="" />
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit,
+                    cupiditate! Eum commodi sit est, eaque quam inventore
+                    necessitatibus hic sapiente autem eius dicta, ipsam debitis! Nulla
+                    quidem iste amet temporibus? necessitatibus hic sapiente autem
+                    eius dicta, ipsam debitis! Nulla necessitatibus hic sapiente autem
+                    eius dicta, ipsam
+                  </p>
+                </div>
+                <button class="btn-more-info">More Info</button>
+              </div>
+            </div>
+          </div>
     </section>
 
 </body>
@@ -201,5 +264,13 @@ for (let i = 0; i < opciones.length; i++) {
         divs[i].classList.remove('hide');
     });
 }
+
+let qAsk = document.querySelectorAll('.asked .questions .question');
+
+ qAsk.forEach((el) => {
+     el.onclick = function(){
+         el.classList.toggle('focus')
+     }
+ })
 </script>
 </html>
