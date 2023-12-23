@@ -498,11 +498,46 @@ main .background-main{
     background-color: var(--rojo-suave);
     color: white;
     margin-top: 1rem;
+    cursor: pointer;
 }
 .container-contacto > button:hover{
     border:  2px solid var(--rojo-suave);
     color:var(--rojo-suave);
     background-color: white;
+}
+footer{
+    width: 100%;
+    height: 90px;
+    background-color: var(--azul-oscuro);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+.logo-enlaces{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.logo-enlaces .enlaces a{
+    text-decoration: none;
+    margin-left: 2.5rem;
+    color: white;
+    font-size: medium;
+}
+.logo-enlaces .enlaces a:hover{
+    color: var(--rojo-suave);
+}
+.redes-sociales i{
+    margin-left: 1rem;
+    color: white;
+    font-size: x-large;
+    cursor: pointer;
+}
+.redes-sociales i:hover{
+    color: var(--rojo-suave);
 }
 /* AQUI INICIA EL BREAKPOINT MENOS DE 600 */
 @media only screen and (max-width: 600px) {
