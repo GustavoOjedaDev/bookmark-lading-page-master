@@ -85,6 +85,7 @@ main{
     height: calc(100vh - 80px);
     display: flex;
     justify-content: center;
+    flex-direction: row;
     align-items: center;
     margin-right: 2rem;
     margin-left: 2rem;
@@ -108,7 +109,6 @@ main .text-main > p{
     color: var(--azul-gris);
     padding-top: 2rem;
     padding-bottom: 2rem;
-    font-weight: 200;
 }
 main .text-main .btn-chrome{
     width: 160px;
@@ -118,7 +118,6 @@ main .text-main .btn-chrome{
     color: white;
     border: none;
     font-weight: 500;
-    /* box-shadow: 4px 4px 15px var(--azul-suave); */
     cursor: pointer;
     margin-right: 1rem;
     
@@ -155,9 +154,85 @@ main .background-main{
     background-color: var(--azul-suave);
     overflow: hidden;
 }
+/* AQUÍ INICIA EL BREAKPOINT MENOS DE 600 DE LA SECTION MAIN */
+@media only screen and (max-width: 600px){
+    main{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        
+    }
+    main .text-main{
+        width: 80%;
+        height: 50%;
+        margin: 0;
+        order: 2;
+        margin-top: 2rem;
+    }
+    main .text-main > h1{
+        text-align: center;
+        font-size: large;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+    main .text-main > p{
+        text-align: center;
+        font-size: medium;
+        color: var(--azul-gris);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .main-buttons{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    main .text-main .btn-chrome{
+        width: 120px;
+        height: 40px;
+        margin-right: 1rem;
+        
+    }
+    main .text-main .btn-firefox{
+        width: 120px;
+        height: 40px;
+    }
+    main .background-main{
+        width: 80%;
+        order: 2;
+        height: 30%;
+        right: 0%;
+        margin-top: -50%;
+        border-radius: 7rem 0rem 0rem 7rem ;
+        background-color: var(--azul-suave);
+    }
+    .main-content picture{
+        width: 100%;
+        height: auto;
+        margin-top: 10%;
+    }
+    .main-content picture img{
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+
+
+
+/* FEATURES */
 .features{
     width: 100%;
-    height: 600px;
+    height: auto;
     padding-top: .5rem;
     display: flex;
     flex-direction: column;
@@ -165,7 +240,7 @@ main .background-main{
 }
 .features .text-features{
     width: 600px;
-    height: 130px;
+    height: auto;
     text-align: center;
     justify-content: center;
 }
@@ -178,9 +253,9 @@ main .background-main{
 }
 .features .opciones-features{
     width: 800px;
-    /* height: 200px; */
+    height: auto;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: row;
     margin-top: 1.5rem;
     justify-content: space-around;
     color: var(--azul-gris);
@@ -205,6 +280,9 @@ main .background-main{
     margin-right: 2rem;
     margin-top: 2rem;
     margin-left: 2rem;
+}
+.hide {
+    display: none;
 }
 .features .opcion1 .bookmarking-background,.intelligent-background,.share-background{
     width: 50%;
@@ -265,9 +343,106 @@ main .background-main{
     border: 2px solid var(--azul-suave);
     background-color: white;
 }
-.hide {
-    display: none;
+/* AQUÍ INICIA EL BREAKPOINT MENOS DE 600 DE LA SECTION CARDS */
+@media only screen and (max-width: 600px){
+    .features{
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+    }
+    .features .text-features{
+        width: 80%;
+        height: auto;
+        text-align: center;
+        
+    }
+    .features .text-features >h2{
+        font-size: large;
+    }
+    .features .text-features > p {
+        font-size: medium;
+    }
+    .features .opciones-features{
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1.5rem;
+        border-bottom: 1px dotted var(--azul-gris);
+    }
+    .opciones-features a{
+        display: block;
+         /* border-bottom: 1px dotted var(--azul-gris); */
+    }
+
+    /* ESTO FALTA POR RETOCAR */
+        .opcion1,.opcion2,.opcion3{
+            width: 80%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            padding: 0;
+        }
+        .hide {
+            display: none;
+        }
+        .features .opcion1 .bookmarking-background,.intelligent-background,.share-background{
+            width: 80%;
+            height: 250px;
+            margin-top: -80%;
+            left: 0%;
+            display: none;
+            
+        }
+        .opcion1 picture > img,
+        .opcion2 picture > img,
+        .opcion3 picture > img{
+            width: 100%;
+            height: auto;
+        }
+        .opcion1 .text-simple-bookmarking,.text-intelligent-search,.text-sharee-bookmarking{
+            width: 80%;
+            margin-left: 0;
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .opcion1 .text-simple-bookmarking > h1,
+        .opcion2 .text-intelligent-search > h1,
+        .opcion3 .text-sharee-bookmarking > h1{
+            text-align: center;
+            font-size: large;
+            margin-left: 0;
+            padding-top: 0;
+            font-weight: none;
+        }
+        .opcion1 .text-simple-bookmarking > p,
+        .opcion2 .text-intelligent-search > p,
+        .opcion3 .text-sharee-bookmarking > p{
+            text-align: center;
+            margin-left: 0;
+            font-size: medium;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        .opcion1 .text-simple-bookmarking .btn-more-info,
+        .opcion2 .text-intelligent-search .btn-more-info,
+        .opcion3 .text-sharee-bookmarking .btn-more-info{
+            width: 110px;
+            height: 40px;
+            border-radius: 4px;
+            margin-left: 0rem;
+            margin-right: 0rem;
+        }
+    
 }
+
 .cards{
     width: 100%;
     height: 600px;
@@ -343,6 +518,40 @@ main .background-main{
 .card3{
     margin-top: 8rem;
 }
+
+/* AQUÍ INICIA EL BREAKPOINT MENOS DE 600 DE LA SECTION CARDS */
+@media only screen and (max-width: 600px){
+    .cards{
+        width: 100%;
+        height: auto;        
+    }
+}
+
+
+
+/* QUESTIONS */
+.padre-text-questions{
+    width: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+}
+.hijo-text-questions{
+    width: 50%;
+    height: 140px;
+    padding-top: 2.5rem;
+    text-align: center;
+}
+.hijo-text-questions > h1{
+    color: var(--azul-oscuro);
+}
+.hijo-text-questions > p {
+    color: var(--azul-gris);
+    padding-top: 1rem;
+}
 .asked {
     padding-top: 1rem;
     display: flex;
@@ -402,6 +611,7 @@ main .background-main{
 }
 .asked .questions .question img {
     width: 25px;
+    height: 25px;
     transition: 0.3s;
 }
 .section-questions .asked .container .questions .btn-more-info{
@@ -420,6 +630,28 @@ main .background-main{
     border: 2px solid var(--azul-suave);
     background-color: white;
 }
+/* AQUÍ INICIA EL BREAKPOINT MENOS DE 600 DE LA SECTION QUESTIONS */
+@media only screen and (max-width: 600px){
+    .section-questions{
+        width: 100%;
+        height: auto;
+    }
+    .asked .questions .question {
+        width: 80%;
+    }
+    .padre-text-questions{
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+    .hijo-text-questions{
+        width: 80%;
+    }
+    .section-questions{
+        width: 100%;
+        height: 650px;
+    }
+}
+
 /* AQUI INICIA EL BREAKPOINT MENOS DE 992PX HASTA 650  */
 @media only screen and (max-width: 992px) {
     .nav .logo{
@@ -435,21 +667,8 @@ main .background-main{
         transition: all 0.15s ease;
     }
 }
-/* AQUÍ INICIA EL BREAKPOINT MENOS DE 650 HASTA MAS DE 600 */
-@media only screen and (max-width: 650px) {
-    .nav .logo{
-        margin-left: 1rem;
-        transition: all 0.15s ease;
-    }
-    .nav .section-items{
-        margin-right: 1rem;
-        transition: all 0.15s ease;
-    }
-    .nav .section-items .div-items a{
-        padding: 1rem;
-        transition: all 0.15s ease;
-    }
-}
+
+/* CONTACTO */
 .contacto{
     width: 100%;
     height: 250px;
@@ -505,6 +724,18 @@ main .background-main{
     color:var(--rojo-suave);
     background-color: white;
 }
+/* AQUÍ INICIA EL BREAKPOINT MENOS DE 600 DEL CONTACTO */
+@media only screen and (max-width: 600px){
+    .container-contacto > p{
+        font-size: small;
+        margin-top: 1rem;
+    }
+    .container-contacto > h1{
+        font-size: x-large;
+        margin-top: 1rem;
+    }
+}
+/* FOOTER */
 footer{
     width: 100%;
     height: 90px;
@@ -539,6 +770,70 @@ footer{
 .redes-sociales i:hover{
     color: var(--rojo-suave);
 }
+
+/* AQUÍ INICIA EL BREAKPOINT MENOS DE 600 DEL FOOTER */
+@media only screen and (max-width: 600px){
+    footer{
+        flex-direction: column;
+        align-items: center;
+        height: 220px;
+    }
+    .logo-enlaces{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    div .enlaces{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    .logo-enlaces .enlaces a{
+        display: flex;
+        flex-direction: column;
+        margin-top: .5rem;
+        justify-content: center;
+        margin-left: 0;
+    }
+    div .redes-sociales{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    .redes-sociales i:first-child{
+        margin-left: 0rem;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+/* AQUÍ INICIA EL BREAKPOINT MENOS DE 650 HASTA MAS DE 600 */
+@media only screen and (max-width: 650px) {
+    .nav .logo{
+        margin-left: 1rem;
+        transition: all 0.15s ease;
+    }
+    .nav .section-items{
+        margin-right: 1rem;
+        transition: all 0.15s ease;
+    }
+    .nav .section-items .div-items a{
+        padding: 1rem;
+        transition: all 0.15s ease;
+    }
+}
+
 /* AQUI INICIA EL BREAKPOINT MENOS DE 600 */
 @media only screen and (max-width: 600px) {
     .nav .section-items .item-boton > button{
@@ -556,19 +851,11 @@ footer{
         transition: all 0.15s ease;
 
     }
-    /* .nav .icon {
-        display: block;
-        padding-right: 1.25rem;
-        z-index: 1;
-        transition: all 0.15s ease;
-        
-    } */
     .icon-bar{
         display: block;
         padding-right: 1.25rem;
         cursor: pointer;
     }
-
     .nav .section-items{
         position: absolute;
         width: 100%;
