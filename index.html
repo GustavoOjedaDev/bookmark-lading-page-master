@@ -13,7 +13,7 @@
         <div class="logo">
             <a href="" ><img src="../assets/images/logo-bookmark.svg" alt="" id="miImagen"></a>
             <button class="icon-bar">
-                <i class="fa-solid fa-bars fa-lg" style="color: white"></i>
+                <i class="fa-solid fa-bars fa-lg" style="color: hsla(228, 81%, 15%, 0.9)"></i>
             </button>
         </div>
         <section class="section-items">
@@ -238,7 +238,7 @@ function cambiarImagen() {
     // Comprueba el ancho de la ventana
     if (window.innerWidth < 600) {
         // Si el ancho de la ventana es 600px o menos, cambia la imagen
-        imagen.src = '../assets/images/logo-bookmarkEDIT.svg';
+        imagen.src = '../assets/images/logo-bookmark.svg';
     } else {
         // Si el ancho de la ventana es mayor que 600px, usa la imagen original
         imagen.src = '../assets/images/logo-bookmark.svg';
@@ -262,10 +262,14 @@ if (miImagen.getAttribute("src") === "../assets/images/logo-bookmark.svg") {
     } else {
         miImagen.setAttribute("src", "../assets/images/logo-bookmark.svg");  // Cambia a la ruta original
     }
-    if (icon.style.color === "white") {
-        icon.style.color = "hsla(228, 81%, 15%, 0.9)";  // Cambia a azul
+    if (icon.classList.contains("fa-bars")) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");  // Cambia a otro ícono
+        icon.style.color = "white";  // Cambia el color a blanco
     } else {
-        icon.style.color = "white";  // Cambia a blanco
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");  // Cambia al ícono original
+        icon.style.color = "hsla(228, 81%, 15%, 0.9)";  // Cambia el color a azul
     }
 });
 
