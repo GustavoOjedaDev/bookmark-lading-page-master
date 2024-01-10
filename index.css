@@ -703,7 +703,6 @@ main .background-main{
         font-size: medium;
     }
 }
-
 /* AQUI INICIA EL BREAKPOINT MENOS DE 992PX HASTA 650  */
 @media only screen and (max-width: 992px) {
     .nav .logo{
