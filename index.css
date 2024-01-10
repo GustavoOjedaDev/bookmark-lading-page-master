@@ -696,10 +696,6 @@ main .background-main{
     .hijo-text-questions{
         width: 80%;
     }
-    .section-questions{
-        width: 100%;
-        height: 650px;
-    }
     .hijo-text-questions > h1{
         font-size: large;
     }
